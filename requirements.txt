@@ -1,4 +1,12 @@
+# application
 Flask
+Flask-Login
 Flask-Session
-psycopg2
+Flask-WTF
 SQLAlchemy
+psycopg2
+
+# development
+python-dotenv
+pytest
+autopep8

@@ -1,3 +1,6 @@
+-- --------------------------------------------
+-- books
+-- --------------------------------------------
 DROP TABLE IF EXISTS books;
 
 CREATE TABLE books (
@@ -9,4 +12,3 @@ CREATE TABLE books (
 );
 
 ALTER SEQUENCE books_id_seq RESTART WITH 1001;
-
