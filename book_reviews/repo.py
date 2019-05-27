@@ -2,6 +2,7 @@ import csv
 
 books = []
 by_id = {}
+by_isbn = {}
 
 
 def init_app(app):
@@ -13,6 +14,7 @@ def init_app(app):
             rec['id'] = id
             books.append(rec)
             by_id[id] = rec
+            by_isbn[rec['isbn']] = rec
 
 
 def find_books(term='', offset=0, limit=10):
@@ -26,5 +28,5 @@ def find_books(term='', offset=0, limit=10):
     return results[offset:limit+1]
 
 
-def load_book(id):
-    return by_id.get(id, None)
+def load_book(isbn):
+    return by_isbn.get(isbn, None)

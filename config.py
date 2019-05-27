@@ -11,4 +11,4 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BOOKS_CSV = os.path.join(basedir, 'books.csv')
     ADMINS = ['your-email@example.com']
-    BOOKS_PER_PAGE = 25
+    PAGE_SIZE = 25

@@ -24,7 +24,15 @@ def create_app(config_class=Config):
     from book_reviews import repo
     repo.init_app(app)
 
+    from book_reviews import auth
+    auth.init_app(app)
+    app.register_blueprint(auth.bp, url_prefix='/auth')
+
     from book_reviews import books
     app.register_blueprint(books.bp, url_prefix='/books')
+
+    @app.route('/')
+    def index():
+        return "index"
 
     return app
